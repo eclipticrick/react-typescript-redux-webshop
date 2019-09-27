@@ -1,9 +1,9 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import storeReducer from './app/store';
 import cartReducer from './app/cart';
 import uiReducer from './app/ui';
-// import ReduxThunk from 'redux-thunk';
+import thunk from 'redux-thunk';
 
 const rootReducer = combineReducers({
     store: storeReducer,
@@ -11,8 +11,12 @@ const rootReducer = combineReducers({
     ui: uiReducer
 });
 
+const middleware = [
+    thunk
+];
+
 export const store = createStore(rootReducer, composeWithDevTools(
-    // applyMiddleware(...middleware)
+    applyMiddleware(...middleware)
 ));
 
 export default store;
