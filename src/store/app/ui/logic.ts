@@ -1,9 +1,12 @@
 import {IReducerUi} from "./interface";
-import {ILayout} from "../../interfaces/Layout";
+import {Layout} from "../../interfaces/Layout";
 
 const FUNCTIONS = {
-    setLayout: (state: IReducerUi, layout: ILayout) => {
-        return state
+    setLayout: (state: IReducerUi, layout: Layout) => {
+        return {
+            ...state,
+            layout
+        }
     }
 };
 

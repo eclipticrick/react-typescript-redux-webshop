@@ -1,14 +1,34 @@
 import {IReducerStore} from "./interface";
+import {IProduct} from "../../interfaces/Product";
+import {SortDirection} from "../../interfaces/SortDirection";
 
 const FUNCTIONS = {
     fetchProductsPending: (state: IReducerStore) => {
-        return state
+        return {
+            ...state,
+            loading: true,
+            error: false
+        }
     },
-    fetchProductsSuccess: (state: IReducerStore, payload: any) => {
-        return state
+    fetchProductsSuccess: (state: IReducerStore, payload: IProduct[]) => {
+        return {
+            ...state,
+            loading: false,
+            products: payload
+        }
     },
-    fetchProductsFailure: (state: IReducerStore, payload: any) => {
-        return state
+    fetchProductsFailure: (state: IReducerStore) => {
+        return {
+            ...state,
+            loading: false,
+            error: true
+        }
+    },
+    sortProductList: (state: IReducerStore, payload: SortDirection) => {
+        return {
+            ...state,
+            sort: payload
+        }
     }
 };
 

@@ -2,7 +2,7 @@ import reducerFunctions from "./logic";
 import {APP_PREFIX} from "../index";
 import {IReducerUi} from "./interface";
 import {IAction} from "../../interfaces/redux";
-import {ILayout} from "../../interfaces/Layout";
+import {Layout} from "../../interfaces/Layout";
 
 /* Action types */
 export const REDUCER_PREFIX = 'UI';
@@ -12,7 +12,7 @@ export const ACTION_TYPES = {
 
 /* Reducer */
 const initialState: IReducerUi = {
-    layout: ILayout.COLUMN
+    layout: Layout.COLUMNS
 };
 const REDUCER = (state: IReducerUi = initialState, action: IAction): IReducerUi => {
     const {type, payload} = action;
@@ -24,4 +24,4 @@ const REDUCER = (state: IReducerUi = initialState, action: IAction): IReducerUi 
 export default REDUCER;
 
 /* Action creators */
-export const setLayout = (layout: ILayout) => ({type: ACTION_TYPES.SET_LAYOUT, payload: layout});
+export const setLayout = (layout: Layout) => ({type: ACTION_TYPES.SET_LAYOUT, payload: layout});

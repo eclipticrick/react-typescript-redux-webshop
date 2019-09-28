@@ -26,5 +26,5 @@ export default REDUCER;
 
 /* Action creators */
 export const addProductToCart = (productId: number) => ({type: ACTION_TYPES.ADD, payload: productId});
-export const removeProductFromCart = (productId: number) => ({type: ACTION_TYPES.ADD, payload: productId});
+export const removeProductFromCart = (productId: number) => ({type: ACTION_TYPES.REMOVE, payload: productId});
 

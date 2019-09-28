@@ -1,6 +1,6 @@
-import {ILayout} from "../../interfaces/Layout";
+import {Layout} from "../../interfaces/Layout";
 
 export interface IReducerUi {
-    layout: ILayout
+    layout: Layout
     // overlayActive: boolean ?
 }

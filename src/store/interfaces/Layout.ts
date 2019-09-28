@@ -1,4 +1,4 @@
-export enum ILayout {
-    ROW = 'ROW',
-    COLUMN = 'COLUMN',
+export enum Layout {
+    ROWS = 'ROWS',
+    COLUMNS = 'COLUMNS',
 }
