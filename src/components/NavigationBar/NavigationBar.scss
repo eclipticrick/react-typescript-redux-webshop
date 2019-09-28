@@ -1,0 +1,11 @@
+@import '../../variables';
+.NavigationBarComponent {
+  display: flex;
+  align-items: center;
+  background: $primary;
+}
+.NavigationBarComponent > .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
