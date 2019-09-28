@@ -1,3 +1,3 @@
-import Content from "./Content.component";
+import ContentComponent from "./Content.component";
 
-export default Content;
+export default ContentComponent;
