@@ -6,6 +6,8 @@ import NavigationBarComponent from "../NavigationBar";
 import {Provider} from "react-redux";
 import store from "../../store";
 import {fetchProducts} from "../../store/app/store";
+import {Switch, Route} from "react-router-dom";
+import FormComponent from "../Form";
 
 const App: React.FC = () => {
     useEffect(() => {
@@ -16,7 +18,10 @@ const App: React.FC = () => {
             <Router>
                 <div className='App theme-green'>
                     <NavigationBarComponent/>
-                    <ContentComponent/>
+                    <Switch>
+                        <Route exact path="/" component={ContentComponent}/>
+                        <Route path="/form" component={FormComponent}/>
+                    </Switch>
                 </div>
             </Router>
         </Provider>
