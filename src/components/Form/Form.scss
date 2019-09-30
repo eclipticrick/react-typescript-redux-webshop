@@ -1,3 +1,5 @@
+@import '../../variables';
+
 .FormComponent {
   //display: grid;
   //grid-template-rows: 50px auto;
@@ -12,8 +14,45 @@
   //  // 700
   //  // grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   //}
+  .error {
+    color: red;
+    font-size: 80%;
+  }
+  button {
+    display: block;
+    width: 100%;
+    padding: 30px;
+    text-transform: capitalize;
+    border: 0;
+    border-radius: 8px;
+    outline: none;
+    background-color: $primary;
+    color: white;
+    transition: background-color .25s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    &:hover {
+      background-color: $primary-accent;
+    }
+    &:active {
+      background-color: $primary-dark;
+    }
+    &.edit {
+      display: inline-block;
+      padding: 12px;
+      width: 150px;
+      max-width: 100%;
+      float: right;
+      margin: 12px auto;
+      background-color: $secondary;
+      &:hover {
+        background-color: $secondary-accent;
+      }
+      &:active {
+        background-color: $secondary-dark;
+      }
+    }
+  }
   form {
-
     > .formField {
       padding: 12px;
       label {
